@@ -1,0 +1,43 @@
+//this is
+plugins {
+    id 'application'
+    id 'org.jetbrains.kotlin.jvm' version '1.5.31'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.5.30'
+}
+
+group "com.c0d3rdojo"
+version "0.0.1"
+mainClassName = "com.c0d3rdojo.ApplicationKt"
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    implementation "io.ktor:ktor-server-core:$ktor_version"
+    implementation "io.ktor:ktor-mustache:$ktor_version"
+    implementation "io.ktor:ktor-auth:$ktor_version"
+    implementation "io.ktor:ktor-auth-jwt:$ktor_version"
+    implementation "io.ktor:ktor-locations:$ktor_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-html-jvm:0.7.3"
+    implementation "io.ktor:ktor-html-builder:$ktor_version"
+    implementation "io.ktor:ktor-websockets:$ktor_version"
+    implementation "io.ktor:ktor-server-netty:$ktor_version"
+    implementation "io.ktor:ktor-server-tomcat:$ktor_version"
+    implementation "ch.qos.logback:logback-classic:$logback_version"
+    implementation "io.ktor:ktor-serialization:$ktor_version"
+
+    testImplementation "io.ktor:ktor-server-tests:$ktor_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
+
+    //ktorm
+    implementation group: 'org.ktorm', name: 'ktorm-core', version: '3.4.1'
+
+    //mysql
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.26'
+
+
+    implementation "com.itextpdf:itext7-core:7.1.11"
+}
+
